@@ -102,7 +102,11 @@ puppet:
     version: ['>= 7.6.0', '< 8.0.0']
 
 BaseOS:
-  url: file:///allowed_imports/RHEL-8-7-0-BaseOS-x86_64/BaseOS
+  # __________________Clone from ISO___________________________
+  url: file:///allowed_imports/BaseOS
+  # __________________Clone from local mirror__________________
+  #url: file:///allowed_imports/rhel-8-for-x86_64-baseos-rpms
+  # __________________Clone from CDN___________________________
   #url: https://cdn.redhat.com/content/dist/rhel8/$releasever/x86_64/baseos/os
   #url: https://download.simp-project.com/simp/yum/experimental/simp6/el/8/x86_64/BaseOS/
   pulp_remote_options: # example of pulp_remote_options
@@ -252,7 +256,11 @@ BaseOS:
   - name: yum-utils
 
 AppStream:
-  url: file:///allowed_imports/RHEL-8-7-0-BaseOS-x86_64/AppStream
+  # __________________Clone from ISO___________________________
+  url: file:///allowed_imports/AppStream
+  # __________________Clone from local mirror__________________
+  #url: file:///allowed_imports/rhel-8-for-x86_64-appstream-rpms
+  # __________________Clone from CDN___________________________
   #url: https://cdn.redhat.com/content/e4s/rhel8/8/x86_64/appstream/os
   #url: https://download.simp-project.com/simp/yum/experimental/simp6/el/8/x86_64/AppStream/
   pulp_remote_options: # example of pulp_remote_options
@@ -312,15 +320,18 @@ AppStream:
   # ------------------------------------
   # 389-ds module RPMs
   # - 1.4.3.30 is the version on the RHEL8.7 ISO
+  # - 1.4.3.32 is the version on the RHEL8.8 ISO
+  # - 1.4.3.35 is the latest version in the AppStream repo, as of this writing
+  #   if you're working with a local mirror
   # - The only reason the versions are specified is because that they have to match
   - name: 389-ds-base
-    version: '= 1.4.3.30'
+    version: '= 1.4.3.32'
   - name: 389-ds-base-libs
-    version: '= 1.4.3.30'
+    version: '= 1.4.3.32'
   - name: 389-ds-base-legacy-tools
-    version: '= 1.4.3.30'
+    version: '= 1.4.3.32'
   - name: python3-lib389
-    version: '= 1.4.3.30'
+    version: '= 1.4.3.32'
   # ------------------------------------
   - name: acpid
   - name: aide

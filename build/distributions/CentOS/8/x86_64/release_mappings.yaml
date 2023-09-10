@@ -13,10 +13,10 @@ simp_releases:
         os_version:   '8.5'
       RedHat:
         isos:
-          - name:     'rhel-server-8.5-x86_64-dvd.iso'
-            size:     10130292736
-            checksum: '48f955712454c32718dcde858dea5aca574376a1d7a4b0ed6908ac0b85597811'
-        build_command: 'bundle exec rake build:auto[rhel-server-8.5-x86_64-dvd.iso,6.X]'
+          - name:     'rhel-8.8-x86_64-dvd.iso'
+            size:     12534677504
+            checksum: '517abcc67ee3b7212f57e180f5d30be3e8269e7a99e127a3399b7935c7e00a09'
+        build_command: 'bundle exec rake build:auto[rhel-8.8-x86_64-dvd.iso,6.X]'
         os_version:   '8.5'
   '6.6':
     flavors:
@@ -29,8 +29,8 @@ simp_releases:
         os_version:   '8.5'
       RedHat:
         isos:
-          - name:     'rhel-server-8.5-x86_64-dvd.iso'
-            size:     10130292736
-            checksum: '48f955712454c32718dcde858dea5aca574376a1d7a4b0ed6908ac0b85597811'
-        build_command: 'bundle exec rake build:auto[rhel-server-8.5-x86_64-dvd.iso,6.6]'
-        os_version:   '8.5'
+          - name:     'rhel-8.8-x86_64-dvd.iso'
+            size:     12534677504
+            checksum: '517abcc67ee3b7212f57e180f5d30be3e8269e7a99e127a3399b7935c7e00a09'
+        build_command: 'bundle exec rake build:auto[rhel-8.8-x86_64-dvd.iso,6.6]'
+        os_version:   '8.8'
